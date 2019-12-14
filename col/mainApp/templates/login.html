@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>Thankyou for logging in</h1>
+{% else %}
+<div class="container jumbotron">
+    <form action="{% url 'user_login' %}" method="POST">
+        {% csrf_token %}
+
+        <label for="username">User name:</label>
+        <input type="text" name="username" placeholder="Enter username">
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="password">
+        <br><br>
+
+        <input type="submit" name="" value="Login">
+    </form>
+</div>
+{% endif %}
+
+
+{% endblock %}

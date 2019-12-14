@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<br>    
+<div class="container border">
+    {% if user.is_authenticated %}
+    <h1>Home Page</h1>
+    <p>Hi {{user.username}}</p>
+    <p>Email : {{user.email}}</p>
+
+    {% if profile_pic %}
+    <p>Profile pic:</p>
+    <img src="{{ profile_pic.url }}" alt="" style="width: 30%; height: auto;">
+    {% else %}
+    <p>no profile pic</p>
+    {% endif %}
+    {% else %}
+    <h1>Welcome</h1>
+
+    {% endif %}
+
+</div>
+{% endblock %}

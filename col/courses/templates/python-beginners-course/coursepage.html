@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Python Beginners Course{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <br>
+    <h1 style="text-align: center;">Python Beginners Course</h1>
+    <br>
+    <div class="jumbotron">
+        <ol>
+        {% for lesson in course_lessons %}
+            <li><a href="{% url lesson.lesson_url %}">{{lesson.lesson_name}}</a></li>
+        {% endfor %}
+        </ol>
+    </div>
+</div>
+
+{% endblock %}

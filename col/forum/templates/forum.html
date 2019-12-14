@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Forum{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-2 border">
+
+        </div>
+        <div class="col-lg-6 border">
+                <h1 style="text-align: center;">Forum Page</h1>
+                <hr>
+            <ol>
+                {% for question in questions %}
+                <li>
+                    <h4>{{question.title}}</h4>
+                </li>
+                <hr>
+                {% endfor %}
+            </ol>
+        
+        </div>
+        <div class="col-lg-4 border"></div>
+    </div>
+</div>
+{% endblock %}

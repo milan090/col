@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}My Courses{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="jumbotron bg-cyan">
+        <h1>Learn something New!</h1>
+        <a href="{% url 'courses' %}">View courses</a>
+    </div>
+</div>
+
+{% for course_item in user_courses %}
+<div class="container">
+    <div class="jumbotron">
+        <h3>{{course_item.course.course_name}}</h3>
+        <p>{{course_item.course.course_discription}}</p>
+        <!-- <div class="progress bg-dark" style="width: 25%;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: {{course_item.course_progress}}%;" aria-valuenow="{{course_item.course_progress}}" aria-valuemin="0" aria-valuemax="100">{{course_item.course_progress}}% completed</div>
+        </div><br> -->
+        <a href="{% url course_item.course.course_url %}">Topics</a>
+        <form action="{% url 'remove_course' %}" method="GET">
+            <input type="hidden" value="{{course_item.course.course_name}}" name="coursename">
+            <input type="submit" value="Remove" class="btn btn-danger">
+        </form>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}
