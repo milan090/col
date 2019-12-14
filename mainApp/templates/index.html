@@ -3,7 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<br>    
+<br>
 <div class="container border">
     {% if user.is_authenticated %}
     <h1>Home Page</h1>
@@ -17,7 +17,14 @@
     <p>no profile pic</p>
     {% endif %}
     {% else %}
-    <h1>Welcome</h1>
+    <div style="text-align: center;">
+        <h1 class="lead font-weight-strong display-3">Welcome</h1>
+        <p class="lead">Learning made simple and more fun with COL. We think learnin should be more
+            collaborative than copetitive. We strive to get the best out of our students by
+            introducing them to the world of collaboration where you help each other out and improve
+            yourself and your colleagues. Good luck!
+        </p>
+    </div>
 
     {% endif %}
 
