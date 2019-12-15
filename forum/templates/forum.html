@@ -2,6 +2,22 @@
 {% block title %}Forum{% endblock %}
 
 {% block content %}
+<style>
+    #ask-btn{
+        color: white;
+        background-color: rgb(70, 101, 238);
+        border: black;
+        padding: 5px 15px;
+        border-radius: 2px;
+    }
+
+    #ask-btn:hover{
+        background-color: rgb(42, 78, 238);
+        padding: 6px 16px;
+        text-decoration: none;
+    }
+    
+</style>
 <div class="container">
 
     <div class="row">
@@ -9,7 +25,10 @@
 
         </div>
         <div class="col-lg-6 border">
-                <h1 style="text-align: center;">Forum Page</h1>
+                <p>
+                    <span class="h1">Forum</span>
+                    <span><a href="#" style="float: right; margin: 10px" id="ask-btn">Ask Question</a></span>
+                </p>
                 <hr>
             <ol>
                 {% for question in questions %}

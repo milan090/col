@@ -4,22 +4,48 @@
 
 {% block content %}
 
+<style>
+
+    td{
+        padding: 10px;
+    }
+
+    #login-btn{
+        color: white;
+        background-color: rgb(57, 116, 226);
+        border: none;
+        padding: 5px 15px;
+        border-radius: 3px;
+    }
+    #login-btn:hover{
+        background-color: rgb(72, 72, 252);
+    }
+
+</style>
+
 {% if user.is_authenticated %}
 <h1>Thankyou for logging in</h1>
 {% else %}
 <div class="container jumbotron">
     <form action="{% url 'user_login' %}" method="POST">
         {% csrf_token %}
+        <div>
+        <table style="margin: auto;">
+            <tr>
+                <td> <label for="username">User name:</label></td>
+                <td> <input type="text" name="username" placeholder="Enter username"></td>
+            </tr>
+            <tr>
+                <td> <label for="password">Password:</label></td>
+                <td> <input type="password" name="password" placeholder="password"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="" value="Login" id="login-btn"></td>
+            </tr>
+        </table>
 
-        <label for="username">User name:</label>
-        <input type="text" name="username" placeholder="Enter username">
-        <br>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" placeholder="password">
-        <br><br>
 
-        <input type="submit" name="" value="Login">
+        </div>
     </form>
 </div>
 {% endif %}
