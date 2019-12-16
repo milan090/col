@@ -14,3 +14,8 @@ class UserProfileInfo(models.Model):
 
 User._meta.get_field('email')._unique = True
 
+
+class UserToken(models.Model):
+    token = models.CharField(max_length=37)
+    link = models.URLField(blank=True)
+    userId = models.IntegerField()

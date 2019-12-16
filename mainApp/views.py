@@ -7,6 +7,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from .userverfiy import fn_generate_token
 
 # Create your views here.
 def index(req):
@@ -34,14 +35,15 @@ def register(req):
             print('worx')
             user = user_form.save()
             user.set_password(user.password)
+            user.is_active = False
             user.save()
-
             user_profile = profile_form.save(commit=False)
             user_profile.user = user
             if 'profile_pic' in req.FILES:
                 user_profile.profile_pic = req.FILES['profile_pic']
             user_profile.save()
             registered = True
+            fn_generate_token(user.id)
             return HttpResponseRedirect(reverse('user_login'))
         else:
             print(user_form.errors, profile_form.errors)
