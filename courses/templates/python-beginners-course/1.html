@@ -1,8 +1,25 @@
-{% extends 'base.html' %}
+{% extends 'chapters.html' %}
 {% block title %}{{lesson.lesson_name}}{% endblock %}
 
-{% block content %}
+{% block c_content %}
 
-<h1>{{lesson.lesson_name}}</h1>
+    <p class="lead">Hello Everyone. Welcome to the Python Beginner's Course. On the first chapter you will be learning 
+        a few important things your should know about Python and how you should do the entire Course
+        to get the most out of it and by the time you complete this course you will have learned a lot of things.
+    </p>
+    <h3>Why Python?</h3>
+    <p class="lead">
+        First things first. Why Python? Out of all the leanguages out there like Javascript, C#, C++ etc.
+        And why should 'I' learn python? Is this the right choice? and many more questions must be arising 
+        in your mind right now. So for answeing this let me give you a list of the fields in which python is
+        widely used:
+        <ul >
+            <li><span style="font-weight: bold;">Machine Learning!!!</span> Well if you aren't living under a rock you 
+            must have heard about ML and all the hype going around it on how it can automate and revolutionize
+            the technological world.</li>
+
+        </ul>
+    </p>
+
 
 {% endblock %}
