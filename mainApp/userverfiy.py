@@ -11,6 +11,7 @@ def fn_generate_token(userId):
             link = 'http://127.0.0.1:8000/ActivateUser?token={}&userId={}'.format(token, userId)
             user_token_obj = UserToken(token=token, userId=userId, link=link)
             user_token_obj.save()
+            return link
 
 
 def fn_verify_token(req):

@@ -8,6 +8,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .userverfiy import fn_generate_token
+from django.core.mail import send_mail
 
 # Create your views here.
 def index(req):
@@ -32,7 +33,6 @@ def register(req):
         profile_form = UserProfileInfoForm(data=req.POST)
         
         if user_form.is_valid() and profile_form.is_valid():
-            print('worx')
             user = user_form.save()
             user.set_password(user.password)
             user.is_active = False
@@ -43,7 +43,17 @@ def register(req):
                 user_profile.profile_pic = req.FILES['profile_pic']
             user_profile.save()
             registered = True
-            fn_generate_token(user.id)
+
+            try:
+                send_mail(
+                    'Email Confirmation - COL',
+                    'Click the link to confirm \n {}'.format(fn_generate_token(user.id)),
+                    'milanmuhammed1@gmail.com',
+                    [req.POST['email']],
+                    fail_silently=False,
+                )
+            except:
+                pass
             return HttpResponseRedirect(reverse('user_login'))
         else:
             print(user_form.errors, profile_form.errors)
