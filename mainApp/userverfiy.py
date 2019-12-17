@@ -24,13 +24,16 @@ def fn_verify_token(req):
             user_obj.is_active = True
             user_obj.save()
             UserToken.objects.get(userId=user_id).delete()
-            send_mail(
-                'Account confirmed - COL',
-                'Now you can login to your account \n https://col.pythonanywhere.com/login '
-                'milanmuhammed1@gmail.com',
-                [user_obj.email],
-                fail_silently=False,
-            )
+            try:
+                send_mail(
+                    'Thank You for registering',
+                    'Thank you for registering on CoL. Go and Login right now choose your course.\n https://col.pythonanywhere.com/login',
+                    'milanmuhammed1@gmail.com',
+                    [str(user_obj.email)],
+                    fail_silently=False,
+                )
+            except:
+                return HttpResponse('User activated but didn\'t send thankyou email with email id : ' + str(user_obj.email) )
             return HttpResponse('user activated')
         return HttpResponse('invalid token')
     except Exception as identifier:
