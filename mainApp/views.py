@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from .userverfiy import fn_generate_token
 from django.core.mail import send_mail
 
+
 # Create your views here.
 def index(req):
     if req.user.is_authenticated:
@@ -47,7 +48,7 @@ def register(req):
             try:
                 send_mail(
                     'Email Confirmation - COL',
-                    'Click the link to confirm \n {}'.format(fn_generate_token(user.id)),
+                    'Click the link to confirm \n {}'.format(fn_generate_token(user.id,req.META['HTTP_HOST'])),
                     'milanmuhammed1@gmail.com',
                     [req.POST['email']],
                     fail_silently=False,
