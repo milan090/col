@@ -4,12 +4,12 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.core.mail import send_mail
 
-def fn_generate_token(userId, domain):
+def fn_generate_token(userId):
     if userId > 0:
         exists = UserToken.objects.filter(userId=userId).exists()
         if not exists:
             token = uuid.uuid4()
-            link = 'http://{}/ActivateUser?token={}&userId={}'.format(domain,token, userId)
+            link = 'http://col.pythonanywhere.com/ActivateUser?token={}&userId={}'.format(token, userId)
             user_token_obj = UserToken(token=token, userId=userId, link=link)
             user_token_obj.save()
             return link
@@ -26,7 +26,7 @@ def fn_verify_token(req):
             UserToken.objects.get(userId=user_id).delete()
             send_mail(
                 'Account confirmed - COL',
-                'Now you can login to your account \n https://127.0.0.1:8000/login '
+                'Now you can login to your account \n https://col.pythonanywhere.com/login '
                 'milanmuhammed1@gmail.com',
                 [user_obj.email],
                 fail_silently=False,

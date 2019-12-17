@@ -45,16 +45,15 @@ def register(req):
             user_profile.save()
             registered = True
 
-            try:
-                send_mail(
-                    'Email Confirmation - COL',
-                    'Click the link to confirm \n {}'.format(fn_generate_token(user.id)),
-                    'milanmuhammed1@gmail.com',
-                    [req.POST['email']],
-                    fail_silently=False,
-                )
-            except:
-                pass
+
+            send_mail(
+                'Email Confirmation - COL',
+                'Click the link to confirm \n {}'.format(fn_generate_token(user.id)),
+                'milanmuhammed1@gmail.com',
+                [req.POST['email']],
+                fail_silently=False,
+            )
+
             return HttpResponseRedirect(reverse('user_login'))
         else:
             print(user_form.errors, profile_form.errors)
