@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Confirm your Email{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <p>Hi {{user.username}}</p>
+        <p>Email : {{user.email}}</p>
+    
+        {% if profile_pic %}
+        <p>Profile pic:</p>
+        <img src="{{ profile_pic.url }}" alt="" style="width: 30%; height: auto;">
+        {% else %}
+        <p>no profile pic</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

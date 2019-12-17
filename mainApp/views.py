@@ -13,18 +13,7 @@ from django.core.mail import send_mail
 
 # Create your views here.
 def index(req):
-    if req.user.is_authenticated:
-        userProfile = UserProfileInfo.objects.filter(user=req.user)[0]
-        try:
-            img = userProfile.profile_pic
-        except:
-            img = None
-        print(img)
-        return render(req, 'index.html', {
-            'profile_pic': img,
-        })
-    else:
-        return render(req, 'index.html')
+    return render(req, 'index.html')
 
 def register(req):
     registered = False
@@ -91,6 +80,12 @@ def user_logout(req):
     return HttpResponseRedirect(reverse('index'))
 
 @login_required
-def special(req):
-    return HttpResponse('You are special')
-
+def profile(req):
+    userProfile = UserProfileInfo.objects.get(user=req.user)
+    try:
+        img = userProfile.profile_pic
+    except:
+        img = None
+    return render(req, 'profile.html', {
+        'profile_pic': img,
+    })
