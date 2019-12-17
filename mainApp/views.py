@@ -32,7 +32,7 @@ def register(req):
     if req.method == 'POST':
         user_form = UserForm(data=req.POST)
         profile_form = UserProfileInfoForm(data=req.POST)
-        
+
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save()
             user.set_password(user.password)
@@ -48,7 +48,7 @@ def register(req):
             try:
                 send_mail(
                     'Email Confirmation - COL',
-                    'Click the link to confirm \n {}'.format(fn_generate_token(user.id,req.META['HTTP_HOST'])),
+                    'Click the link to confirm \n {}'.format(fn_generate_token(user.id)),
                     'milanmuhammed1@gmail.com',
                     [req.POST['email']],
                     fail_silently=False,
