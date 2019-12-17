@@ -97,7 +97,7 @@ import django
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.Argon2PasswordHasher',
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-    'django.contrib.auth.hashers.BCryptPasswordHasher',  
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 
@@ -143,11 +143,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_URL = 'mainApp/user_login'
 
-#DataFlair
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_USER_SSL = False
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'milanmuhammed1@gmail.com'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "milanmuhammed1@gmail.com"
 EMAIL_HOST_PASSWORD = 'justlikeme#$%'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
+
