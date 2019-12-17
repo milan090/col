@@ -54,7 +54,9 @@ def register(req):
                 fail_silently=False,
             )
 
-            return HttpResponseRedirect(reverse('user_login'))
+            return render(req,'confirm.html',{
+                'email': str(user.email),
+            })
         else:
             print(user_form.errors, profile_form.errors)
     else:

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Confirm your Email{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron" style="text-align: center;">
+        <h1 class="display-2">Your Account Has Been Confirmed.</h1>
+        <h3>Login to your Account and Enroll in a course.</h3>
+        <a class="display-1" href="{% url 'user_login' %}">Login</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -3,6 +3,7 @@ from .models import UserToken
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.core.mail import send_mail
+from django.shortcuts import render
 
 def fn_generate_token(userId):
     if userId > 0:
@@ -34,7 +35,7 @@ def fn_verify_token(req):
                 )
             except:
                 return HttpResponse('User activated but didn\'t send thankyou email with email id : ' + str(user_obj.email) )
-            return HttpResponse('user activated')
+            return render(req, 'thankyou.html')
         return HttpResponse('invalid token')
     except Exception as identifier:
         pass
