@@ -65,7 +65,7 @@ def user_login(req):
         if user:
             if user.is_active:
                 login(req, user)
-                return HttpResponseRedirect(reverse('index'))
+                return HttpResponseRedirect(reverse('user_profile'))
             else:
                 return HttpResponse('User is not Active')
         else:
