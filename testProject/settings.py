@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '192.168.43.40',
     '127.0.0.1',
-    'milan090.pythonanywhere.com',
+    'col.pythonanywhere.com',
     ]
 
 
