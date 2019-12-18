@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Forgot{% endblock %}
+{% block content %}
+
+<div class="container">
+	<dir class="jumbotron">
+		<form method="POST">
+			{% csrf_token %}
+			<p>
+				<label for="email">Email : </label>
+				<input type="email" name="email">
+			</p>
+			<input type="submit" name="">
+		</form>
+	</dir>
+</div>
+
+{% endblock %}

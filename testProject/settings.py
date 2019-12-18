@@ -89,8 +89,15 @@ DATABASES = {
         'NAME': 'col$col-database',
         'HOST': 'col.mysql.pythonanywhere-services.com',
         'USER': 'col',
-        'PASSWORD': 'justlikeme#$%123'
+        'PASSWORD': 'justlikeme#$%123',
+        'OPTIONS': {
+            # Enable MySQL strict mode. "MySQL's Strict Mode fixes many data
+            # integrity problems in MySQL, such as data truncation upon
+            # insertion, by escalating warnings into errors."
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
+
 }
 
 

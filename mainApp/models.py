@@ -19,3 +19,8 @@ class UserToken(models.Model):
     token = models.CharField(max_length=37)
     link = models.URLField(blank=True)
     userId = models.IntegerField()
+
+class PasswordToken(models.Model):
+    token = models.CharField(max_length=37)
+    link = models.URLField(blank=True)
+    userId = models.IntegerField()

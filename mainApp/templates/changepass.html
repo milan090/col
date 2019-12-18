@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Forgot{% endblock %}
+{% block content %}
+
+<div class="container">
+	<dir class="jumbotron">
+		<form method="POST">
+			{% csrf_token %}
+			<p>
+				<label for="password">New Password : </label>
+				<input type="password" name="newPass">
+				<input type="hidden" name='userId' value="{{ userId }}">
+			</p>
+			<input type="submit" name="">
+		</form>
+	</dir>
+</div>
+
+{% endblock %}
