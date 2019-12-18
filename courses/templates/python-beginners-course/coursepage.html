@@ -10,7 +10,7 @@
     <div class="jumbotron">
         <ol>
         {% for lesson in course_lessons %}
-            <li><a href="{% url lesson.lesson_url %}">{{lesson.lesson_name}}</a></li>
+            <li><a href="{% url lesson.course.course_url|add:'-'|add:lesson.lesson_url %}">{{lesson.lesson_name}}</a></li>
         {% endfor %}
         </ol>
     </div>
