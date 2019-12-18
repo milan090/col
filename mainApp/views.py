@@ -15,6 +15,7 @@ from django.core.mail import send_mail
 def index(req):
     return render(req, 'index.html')
 
+
 def register(req):
     registered = False
 
@@ -33,7 +34,6 @@ def register(req):
                 user_profile.profile_pic = req.FILES['profile_pic']
             user_profile.save()
             registered = True
-
 
             send_mail(
                 'Email Confirmation - COL',
@@ -56,6 +56,7 @@ def register(req):
         'profile_form': profile_form,
         'registered': registered
     })
+
 
 def user_login(req):
     if req.method == 'POST':
@@ -89,3 +90,11 @@ def profile(req):
     return render(req, 'profile.html', {
         'profile_pic': img,
     })
+
+
+@login_required
+def change_profile_pic(req):
+    if 'profile_pic' in req.FILES:
+        userProfile = UserProfileInfo.objects.get(user=req.user)
+        userProfile.profile_pic = req.FILES['profile_pic']
+        userProfile.save()

@@ -12,7 +12,12 @@
         <img src="{{ profile_pic.url }}" alt="" style="width: 30%; height: auto;">
         {% else %}
         <p>no profile pic</p>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="pic">Change Profile Pic : </label>
+            <input type="file" name="profile_pic" id="pic" accept="image/*">
+        </form>
         {% endif %}
+        <br><br>
         <a href="{% url 'forgotpassword' %}">Change Password</a>
     </div>
 </div>
