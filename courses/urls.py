@@ -13,6 +13,6 @@ urlpatterns = [
 ]
 
 for lesson in CourseLesson.objects.all():
-    url = lesson.course.course_url+'/'+lesson.lesson_url
-    urlpatterns.append(path(url, views.lesson_urls(lesson), name=lesson.lesson_url))
+    url = lesson.course +'/'+lesson.lesson_url
+    urlpatterns.append(path(url, views.lesson_urls(lesson), name=lesson.course +'-'+ lesson.lesson_url))
 
