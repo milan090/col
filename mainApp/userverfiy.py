@@ -72,7 +72,7 @@ def change_password(req):
         token = req.GET['token']
         if PasswordToken.objects.filter(token=token).exists():
             return render(req,'changepass.html', {
-                'userId': userId;
+                'userId': userId,
             })
     elif req.method == 'POST':
         userId = req.POST['userId']
