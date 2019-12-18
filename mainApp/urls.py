@@ -9,6 +9,6 @@ urlpatterns = [
     path('logout/', views.user_logout, name='logout'),
     path('ActivateUser', fn_verify_token),
     path('profile', views.profile, name='user_profile'),
-    path('ForgotPassword', forgot_password),
+    path('ForgotPassword', forgot_password, name='forgotpassword'),
     path('ChangePassword', change_password),
 ]
