@@ -82,6 +82,11 @@ def user_logout(req):
 
 @login_required
 def profile(req):
+    if 'profile_pic' in req.FILES:
+        userProfile = UserProfileInfo.objects.get(user=req.user)
+        userProfile.profile_pic = req.FILES['profile_pic']
+        userProfile.save()
+
     userProfile = UserProfileInfo.objects.get(user=req.user)
     try:
         img = userProfile.profile_pic
@@ -90,11 +95,4 @@ def profile(req):
     return render(req, 'profile.html', {
         'profile_pic': img,
     })
-
-
-@login_required
-def change_profile_pic(req):
-    if 'profile_pic' in req.FILES:
-        userProfile = UserProfileInfo.objects.get(user=req.user)
-        userProfile.profile_pic = req.FILES['profile_pic']
-        userProfile.save()
+    
