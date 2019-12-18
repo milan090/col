@@ -13,7 +13,7 @@ def index(req):
     if req.user.is_authenticated:
         usercourses = [i.course for i in UserCourses.objects.filter(user=req.user)]
 
-        
+
     return render(req, 'courses.html',{
         'allcourses':allcourses,
         'usercourses':usercourses,
@@ -63,7 +63,7 @@ def remove_course(req):
             return HttpResponse('No such course named' + ' ' + course_to_remove_name)
         else:
             return HttpResponse("Course not removed"+' '+ course_to_remove_name)
-        
+
 def user_has_course(user,course_name):
     all_user_courses = [i.course for i in UserCourses.objects.filter(user=user)]
     try:
@@ -87,7 +87,7 @@ def python_beginners_course(req):
     })
 
 
-def web_development(req):
+def web_development_easy(req):
     return HttpResponse('Under development')
 
 def lesson_urls(lesson):
