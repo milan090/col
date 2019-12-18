@@ -66,22 +66,24 @@ def forgot_password(req):
         return render(req,'forgot.html')
 
 def change_password(req):
-    try:
-        if req.method == 'GET':
-            userId = req.GET['userId']
-            token = req.GET['token']
-            if PasswordToken.objects.filter(token=token).exists():
-                return render(req,'changepass.html')
-        elif req.method == 'POST':
-            userId = req.POST['userId']
-            newPass = req.POST['newPass']
-            user = User.objects.get(id=str(userId))
-            user.set_password(newPass)
-            user.save()
-            return HttpResponse("Password Updated")
-        else:
-            return HttpResponse("Token expired or invalid")
-    except:
-        return HttpResponseRedirect(reverse('user_login'))
+
+    if req.method == 'GET':
+        userId = req.GET['userId']
+        token = req.GET['token']
+        if PasswordToken.objects.filter(token=token).exists():
+            return render(req,'changepass.html', {
+                'userId': userId;
+            })
+    elif req.method == 'POST':
+        userId = req.POST['userId']
+        newPass = req.POST['newPass']
+        user = User.objects.get(id=str(userId))
+        user.set_password(newPass)
+        user.save()
+        return HttpResponse("Password Updated")
+    else:
+        return HttpResponse("Token expired or invalid")
+
+        
 
 
