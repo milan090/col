@@ -7,7 +7,6 @@ from django.db.models.signals import post_delete
 # Create your models here.
 class UserProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-
     # Additionals
     profile_pic = models.ImageField(upload_to='profile_pics', default=None, blank=True)
 
