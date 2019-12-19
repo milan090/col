@@ -6,6 +6,7 @@ class Question(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     title = models.TextField()
+    description = models.TextField()
 
 class Answer(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -4,8 +4,8 @@
 
 <style>
     .image-cropper {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         position: relative;
         overflow: hidden;
         border-radius: 50%;
@@ -22,26 +22,35 @@
 
 <div class="container">
     <div class="jumbotron">
-        <p>Hi {{user.username}}</p>
-        <p>Email : {{user.email}}</p>
-    
-        {% if profile_pic %}
-        <p>Profile pic:</p>
-        <div class="image-cropper">
-            <img src="{{ profile_pic.url }}" class="img" >
+
+        <div class="row">
+            <div class="col col-lg-6" style="font-size: 1.689em;">
+                <h1 class="display-2">Profile</h1>
+                <p>User : <b>{{ user.username }}</b></p>
+                <p>Email : <b>{{ user.email }}</b></p>
+            </div>
+            <div class="col col-lg-4" style="margin-right: 0; margin-left: auto;">
+                {% if profile_pic %}
+                <div class="image-cropper">
+                    <img src="{{ profile_pic.url }}" class="img" >
+                </div>
+                {% else %}
+                <p>no profile pic</p>
+                {% endif %}
+                <br>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="pic">Change Profile Pic : </label>
+                    <input type="file" name="profile_pic" id="pic" accept="image/*"><br>
+                    <input type="submit" name="" value="Upload" class="btn btn-primary">
+                </form>
+            </div>
+
         </div>
-        {% else %}
-        <p>no profile pic</p>
-        {% endif %}
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <label for="pic">Change Profile Pic : </label>
-            <input type="file" name="profile_pic" id="pic" accept="image/*"><br>
-            <input type="submit" name="" value="Upload">
-        </form>
         <br><br>
         <a href="{% url 'forgotpassword' %}">Change Password</a>
     </div>
 </div>
+
 
 {% endblock %}

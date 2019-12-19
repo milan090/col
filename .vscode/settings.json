@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/milan/anaconda3/envs/col/bin/python",
+    "python.pythonPath": "C:\\Users\\Milan\\Anaconda3\\envs\\myDjangoEnv\\python.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }
