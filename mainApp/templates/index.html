@@ -1,18 +1,438 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html class="no-js" lang="zxx">
 
-{% block title %}Home{% endblock %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CoL</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block content %}
-<br>
-<div class="container border">
-    <div style="text-align: center;">
-        <h1 class="lead font-weight-strong display-3">Welcome</h1>
-        <p class="lead">Learning made simple and more fun with COL. We think learnin should be more
-            collaborative than copetitive. We strive to get the best out of our students by
-            introducing them to the world of collaboration where you help each other out and improve
-            yourself and your colleagues. Good luck!
-        </p>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area d-none d-lg-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 ">
+                            
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <h1 style="color: white;">CoL</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block" >
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="index.html">home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="service.html">Courses</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+
+            
+                                               
+                                            </li>
+                                         
+                                               
+                                            </li>
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="Appointment">
+                                    
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a class="popup-with-form" href="#test-form">REGISTER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider  d-flex align-items-center slider_bg_2 overlay2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text ">
+                                <h3> Learning has  <br>
+                                    never been this fun! </h3>
+                                <p>We are aiming to   <br>
+                                   STOP COMPETITION AND START COLLABORATION .</p>
+                                <div class="video_service_btn">
+                                    <a href="#" class="boxed-btn3">Our Courses</a>
+                                    <a href="#" class="boxed-btn3-white"> <i class="fa fa-play"></i>
+                                        See How it Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- service_area_start -->
+    <div class="service_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-50">
+                        <h3>Explore Our Courses</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service service_bg_1">
+                        <div class="service_hover">
+                        
+                            <h3>Python</h3>
+                            <div class="hover_content">
+                                <div class="hover_content_inner">
+                                    <h4>Python</h4>
+                                    <p>Python is a really powerful and simple language for beginners to get started.It is a general purpose and high level programming language.It was created by Guido van Rossum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service service_bg_2">
+                        <div class="service_hover">
+                            
+                            <h3>Game Development</h3>
+                            <div class="hover_content">
+                                    <div class="hover_content_inner">
+                                        <h4>Game Development</h4>
+                                        <p>Game development is the process of making a video game. You take an idea or a concept for a game, and you develop, render, record, mix, produce, test, etc. until you have a full-fledged game.</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service service_bg_3">
+                        <div class="service_hover">
+                        
+                            <h3>Web Development</h3>
+                            <div class="hover_content">
+                                    <div class="hover_content_inner">
+                                        <h4>Web Development</h4>
+                                        <p>The web development process includes web design, web content development, client-side/server-side scripting and network security configuration, among other tasks</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service_area_end -->
+    <!-- about wrap  -->
+    <div class="about_wrap_area about_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service_wrap text-center">
+                        <img src="{% static 'img/svg_icon/controls.svg" alt="">
+                        <h3>Cabinet Learning</h3>
+                        <p>You'll never walk alone. We will provide courses by teaching in groups </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service_wrap text-center">
+                        <img src="{% static 'img/svg_icon/bar-chart.svg" alt="">
+                        <h3>Completely Free</h3>
+                        <p>We are providing the courses for free! No additional cost required. </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="single_service_wrap text-center">
+                        <img src="{% static 'img/svg_icon/puzzle.svg" alt="">
+                        <h3>Problem Solving</h3>
+                        <p>You will be able to ask any doubts at anytime through our forum.  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+    
+
+    <div class="testmonial_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                        <div class="testmonial_active2 owl-carousel">
+                            <div  class="single_slider text-center" data-dot='<img src="{% static 'img/testmonial/1.png' %}" alt="#" ' >
+                                    <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able.</p>
+                                    <div class="author_name text-center">
+                                        <h4>Muhammed Milan</h4>
+                                        <span> Developer</span>
+                                    </div>
+                                </div>
+                            <div  class="single_slider text-center" data-dot='<img src="{% static 'img/testmonial/rami.jpg' %}" alt="#" ' >
+                                    <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able.</p>
+                                    <div class="author_name text-center">
+                                        <h4>Rami Himdan</h4>
+                                        <span> Developer</span>
+                                    </div>
+                                </div>
+                            <div  class="single_slider text-center" data-dot='<img src="{% static 'img/testmonial/1.png' %}" alt="#" ' >
+                                    <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able.</p>
+                                    <div class="author_name text-center">
+                                        <h4>Fathih Ahmed</h4>
+                                        <span> Developer</span>
+                                    </div>
+                                </div>
+                                <div  class="single_slider text-center" data-dot='<img src="{% static 'img/testmonial/1.png' %}" alt="#" ' >
+                                    <p>.</p>
+                                    <div class="author_name text-center">
+                                        <h4>Hashir Muhammed</h4>
+                                        <span> Developer</span>
+                                    </div>
+                                </div>
+                                <div  class="single_slider text-center" data-dot='<img src="{% static 'img/testmonial/1.png' %}" alt="#" ' >
+                                    <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able.</p>
+                                    <div class="author_name text-center">
+                                        <h4>Salman Fadi</h4>
+                                        <span> Developer</span>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
     </div>
 
-</div>
-{% endblock %}
+    <!-- project  -->
+    <div class="project_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="project_info text-center">
+                        <h3>Do You Need More Courses?</h3>
+                        <p>Feel free to suggest us more topics so that we'll be able to provide more courses .</p>
+                        <a href="#" class="boxed-btn3-white">Suggest Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ project  -->
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <h1 style="color: white;">CoL</h1>
+                                </a>
+                            </div>
+                            <p>
+                               Let's learn and code together by stopping competition and starting collaboration
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Courses
+                            </h3>
+                            <ul>
+                                <li><a href="#">Python</a></li>
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">Game Development</a></li>
+                          
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Useful Links
+                            </h3>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#"> Contact</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Address
+                            </h3>
+                            <ul>
+                                    <li>Calicut, Kerala, India</li>
+                                    <li>+91 8921059271</li>
+                                    <li><a href="#"> col@gmail.com</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/ footer end  -->
+
+    <!-- link that opens popup -->
+
+    <!-- form itself end-->
+    <form id="test-form" class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <div class="popup_header">
+                    <h3>Get Free Quote</h3>
+                </div>
+                <div class="custom_form">
+                        <div class="row">
+                                <div class="col-xl-12">
+                                    <input type="text" placeholder="Your Name">
+                                </div>
+                                <div class="col-xl-12">
+                                    <input type="email" placeholder="Email">
+                                </div>
+                                <div class="col-xl-12">
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-xl-12">
+                                    <button type="submit" class="boxed-btn3">Send</button>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- form itself end -->
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
