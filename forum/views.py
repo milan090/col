@@ -6,7 +6,10 @@ from django.urls import reverse
 
 # Create your views here.
 def index(req):
-    return render(req, 'forum.html')
+    questions = Question.objects.all().order_by('id').reverse()
+    return render(req, 'forum.html', {
+        'questions':questions,
+    })
 
 @login_required
 def ask(req):
@@ -18,3 +21,15 @@ def ask(req):
         q_obj.save()
         return HttpResponseRedirect(reverse('forum'))
     return render(req, 'ask.html')
+
+def question(req):
+    try:
+        question_id = req.GET['id']
+        question_obj = Question.objects.get(id=question_id)
+        answers  = Answer.objects.filter(question=question_obj)
+        return render(req, 'question.html', {
+            'question': question_obj,
+            'answers': answers,
+        })
+    except :
+        return HttpResponse("Http Error")
