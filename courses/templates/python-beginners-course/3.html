@@ -1,8 +1,56 @@
 {% extends 'chapters.html' %}
-{% block title %}{{lesson.lesson_name}}{% endblock %}
+{% load static %}
 
 {% block c_content %}
 
+<p>Now that you have installed python on your PC, tt's time to get started with coding.</p>
+<h3>Python IDLE</h3>
+<p>Python IDLE(Integrated Development Environment) was already installed on your PC when you installed Python.
+    It is the tool that we are going to use for testing small lines of code and learning the basics of Pyhton.
+    After we finish with the basics we will install a more robust Code Editor(IDE) for working with more lines
+    of code for doing exercises, projects(gonna be really exciting) on our way. For now stick with the Python IDLE.
+</p>
+<h5>Opening Python IDLE</h5>
+<p>Open 'Command Prompt' if you are on <b>Windows</b> by searching it in the start menu. Now enter python
+    and hit 'enter'.</p>
+<div class="text-center">
+    <img src="{% static 'winIDLE.jpg' %}" alt="Python IDLE in Command Prompt" class="img-fluid">
+</div>
+<p>You will see something similar to this in your windows terminal too. As you can see in the image above
+    I have installed Python 3.8.1. Here 8.1 is a subversion of Python3. 
+</p>
+<p>For <b>Linux</b> & <b>MacOS</b> users, as shown in the previous guide, you can open up the python IDLE 
+    by just opening in the 'Terminal' and typing in <code class="code">python3</code> and hitting enter.
+    If you face any issues, please ask on the <a href="{% url 'forum' %}">forum.</a></p>
+    <br>
+    <b>Great! Now we've got our IDLE running on your PC!</b>
 
+<h3>A..B..C..D...</h3>
+<p>Since we have the python IDLE opened you can start writing your first bits of python code! <br>
+    The '>>>' sign you see is called a <b>prompt.</b> It means that the IDLE is ready to recieve codes
+    to run. So let's test the IDLE prompt.</p>
+<p>
+    Type your name. for eg: <code class="code">"Hi I am James"</code> with the quotes(either double or single)
+    and hit enter.
+</p>
+<div class="text-center">
+    <img src="{% static 'hi.jpg' %}" alt="Printing my name in IDLE" class="img-flui">
+</div>
+<p>As you can see the IDLE returned 'Hi I am James'.</p>
+<b>Sweat!! You just ran your first lines of python code.</b>
+<p>This might not be really exciting right now, but you should be proud now that you :</p>
+<ul>
+    <li>Installed Python3 on your PC</li>
+    <li>Opened the IDLE in a terminal.</li>
+    <li>Ran a Python code written by yourself!</li>
+</ul>
+<p>Now try typing something else in the new prompt <b>but remember to put quotes</b>(try without quotes
+    to see what would happen.) More explanation on that in the next chapter!</p>
+<p>On the next page we will work with numbers and operations. Good Luck and see you there.</p>
+<br>
+
+<a href="{% url 'python-beginners-course-2' %}"><< Previous</a>
+<a href="{% url 'python-beginners-course-4' %}" style="float: right;">Next >></a>
+<br>
 
 {% endblock %}

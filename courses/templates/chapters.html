@@ -4,7 +4,7 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'chapter.css' %}">
 <head>
-    <title>{{ lesson.lesson_name }}</title>
+    {% block title %}{{ lesson.lesson_name }}{% endblock %}
 </head>
 <div class="container content" >
     <h1 style="text-align: center;" class="display-3">{{ lesson.lesson_name }}</h1><br><br>

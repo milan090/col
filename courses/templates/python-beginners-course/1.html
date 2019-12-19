@@ -1,5 +1,4 @@
 {% extends 'chapters.html' %}
-{% block title %}{{lesson.lesson_name}}{% endblock %}
 {% load static %}
 {% block c_content %}
 
@@ -14,8 +13,10 @@
         Why should 'I' learn python? Is this the right choice? and many more questions must be arising
         in your mind right now. So for answeing this let me give you a list of the fields in which python is
         widely used:
-        <ul >
-            <img src="{% static 'robot.jpg' %}" alt="Image of a robot" style="height: 250px; width: auto; display: block; margin-left: auto; margin-right: auto;">
+        <ul>
+            <div class="text-center">
+                <img src="{% static 'robot.jpg' %}" alt="Image of a robot" class="img-fluid" style="width: 50%; height: auto;">
+            </div>
             <p class="lead" style="text-align: center;">Photo by Owen Beard on Unsplash</p>
             <li><span style="font-weight: bold;">Machine Learning!!!</span><br> Well if you aren't living under a rock you
             must have heard about ML and all the hype going around it on how it can automate and revolutionize

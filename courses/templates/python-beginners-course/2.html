@@ -1,8 +1,70 @@
 {% extends 'chapters.html' %}
-{% block title %}{{lesson.lesson_name}}{% endblock %}
+{% load static %}
 
 {% block c_content %}
 
+<p>Since you'r reading this page I guess you are a little bit interested in learning python or becoming a
+    programmer as a whole. Then this is your <b>first step</b> to the world of programming. It's gonna
+    be really interesting and I'm sure that you'r gonna love this and we will make sure to keep that 
+    promise to you. So without further ado, lets <b>get started!</b> 
+</p>
+<h3>Installing Python3</h3>
+<p>There are 2 popularly know python versions : Python2 and Python3. In this course we will be using
+    <b>Python3</b> because of it being widely adapted now in Machine Learning and Web development 
+    <a href="https://en.wikipedia.org/wiki/Software_framework">frameworks.</a>
+</p>
+<h4>Windows</h4>
+<p>Personally I use Windows(most) and Ubuntu(sorry MacOS users) so most of the course will be taught on 
+    Windows. <b>But don't worry</b> other than the installation part 99% of everything I do will look
+    exactly the same no matter Linux or MacOS because of Python's portability accross different platforms
+    and OS's. <br>
+    <ol>
+        <li>Download the latest version of Python <a href="https://www.python.org/downloads/">here</a></li>
+        <li>From your downloads folder, run the setup by double clicking on it.</li>
+        <div class="text-center">
+            <img src="{% static 'installPy.jpg' %}" alt="Python setup image on windows" class="img-fluid" style="width: 60%; height: auto;">
+        </div>
+        <li>Check the option 'Add Python to PATH'.</li>
+        <li>Choose Install Now</li>
+        <div class="text-center">
+            <img src="{% static 'successPy.jpg' %}" alt="Python installed successfully image on windows" class="img-fluid" style="width: 60%; height: auto;">
+        </div>
+        <li>Great you just installed python3 on your PC!</li>
+    </ol>
+    <br>
+</p>
+<h4>Linux and MacOS</h4>
+<p>Linux and MacOS already has python2 pre-installed in them, but since we need python3 we need to install
+    those.
+    <ul>
+        <li><b>Linux</b>
+        <p>Open terminal by pressing <code class="code">Ctrl + Alt + T</code> on your keyboard. <br>
+            Now enter the below code in terminal. <br> <code class="code">sudo apt-get install python3</code><br>
+            It will ask you to enter your password. Enter it and press Enter. Now it may ask you 'whether you
+            want to install python3 or not', enter 'y' for yes and hit Enter. <br> <b>Yay you installed 
+                python3 on your linux.
+            </b></p><br>
+            <p>Enter 'python3' and hit enter to see if everything went right. If you are facing any problems
+                ask on the <a href="{% url 'forum' %}">forum.</a>
+            </p>
+        </li>
+        <li><b>MacOS</b><br>
+        <p>
+            Open terminal. Copy paste the following code into terminal and hit enter. <br>
+            <code class='code'>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code><br>
+            Now type :<br>
+            <code class="code">brew install python3</code><br>
+            <b>You have successully installed python3 on your MacOS</b><br>
+            To check whether everything went right you can type 'python3' without codes and hit enter.
+            If you are facing any problems ask on the <a href="{% url 'forum' %}">forum.</a>
+        </p></li>
 
+    </ul>
+    <h3>That's it for this chapter. See you in the next :D</h3>
+</p>
+
+
+<a href="{% url 'python-beginners-course-1' %}"><< Previous</a>
+<a href="{% url 'python-beginners-course-3' %}" style="float: right;">Next >></a>
 
 {% endblock %}
