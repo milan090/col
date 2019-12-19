@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Answer, Question
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.contrib.auth.models import User
+
 
 # Create your views here.
 def index(req):
@@ -28,11 +29,11 @@ def question(req):
         quserid = req.POST['quserid']
         qid = req.POST['qid']
         content = req.POST['content']
-        user = User.objects.get(id=qid)
+        user = User.objects.get(id=quserid)
         question = Question.objects.get(id=qid)
         ans_obj = Answer(user=user, question=question, content=content)
         ans_obj.save()
-        return HttpResponseRedirect(reverse('question'))
+        return redirect('/forum/Question?id=' + str(qid))
     try:
         question_id = req.GET['id']
         question_obj = Question.objects.get(id=question_id)

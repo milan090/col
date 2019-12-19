@@ -7,26 +7,27 @@
         <h1>{{ question.title }}</h1>
         <p class="lead">{{ question.description }}</p>
         <p>Asked by : {{ question.user.username }}</p>
-        <a href=""><button class="btn btn-primary">Answer Question</button></a>
+        <a href="#answer_form"><button class="btn btn-primary">Answer Question</button></a>
     </div>
     <br><br>
     {% for answer in answers %}
-    <div class="container">
+    <div class="container jumbotron" style="padding-top: 0;">
         <hr>
+
         <p>{{ answer.content }}</p>
-        <p style="float: left;">Answered by: {{ answer.user.username }}</p>
-        <br><br>
+        <p style="float: left;">Answered by: <b>{{ answer.user.username }}</b></p>
     </div>
     {% endfor %}
 
-    {% if is_authenticated %}
+    {% if user.is_authenticated %}
         <div class="container">
-            <h1 class="display-2">Answer</h1>
-            <form method="POST">
+            <h1>Answer</h1>
+            <form method="POST" name="answer_form">
                 {% csrf_token %}
                 <input type="hidden" value="{{ question.id }}" name="qid">
-                <input type="hidden" value="{{ question.user.id }}" name="quserid">
-                <textarea style="height: 200px; widows: 90%;" name="content" cols="30" rows="10" placeholder="Write a descriptive and genuine answer."></textarea>
+                <input type="hidden" value="{{ .user.id }}" name="quserid">
+                <textarea style="height: 200px; width: 90%;" name="content" cols="30" rows="10" placeholder="Write a descriptive and genuine answer."></textarea>
+                <br>
                 <input type="submit" class="btn btn-primary" value="Submit Answer" id="">
             </form>
         </div>
