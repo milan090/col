@@ -18,6 +18,19 @@
         <br><br>
     </div>
     {% endfor %}
+
+    {% if is_authenticated %}
+        <div class="container">
+            <h1 class="display-2">Answer</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{ question.id }}" name="qid">
+                <input type="hidden" value="{{ question.user.id }}" name="quserid">
+                <textarea style="height: 200px; widows: 90%;" name="content" cols="30" rows="10" placeholder="Write a descriptive and genuine answer."></textarea>
+                <input type="submit" class="btn btn-primary" value="Submit Answer" id="">
+            </form>
+        </div>
+    {% endif %}
 </div>
 
 {% endblock %}

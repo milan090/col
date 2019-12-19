@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .models import Answer, Question
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 # Create your views here.
 def index(req):
@@ -23,6 +24,15 @@ def ask(req):
     return render(req, 'ask.html')
 
 def question(req):
+    if req.method == 'POST':
+        quserid = req.POST['quserid']
+        qid = req.POST['qid']
+        content = req.POST['content']
+        user = User.objects.get(id=qid)
+        question = Question.objects.get(id=qid)
+        ans_obj = Answer(user=user, question=question, content=content)
+        ans_obj.save()
+        return HttpResponseRedirect(reverse('question'))
     try:
         question_id = req.GET['id']
         question_obj = Question.objects.get(id=question_id)
@@ -33,3 +43,11 @@ def question(req):
         })
     except :
         return HttpResponse("Http Error")
+
+# def answer(req):
+#     if req.is_authenticated():
+#         return render(req, 'answer.html')
+#         if req.method == 'POST':
+#             pass
+#     else:
+#         return HttpResponseRedirect(reverse('user_login'))

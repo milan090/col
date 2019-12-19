@@ -33,8 +33,7 @@
             <ol>
                 {% for question in questions %}
                 <li>
-                    <p>{{question.title}}</p>
-                    <a href="https://col.pythonanywhere.com/Question?id={{lesson.id}}"></a>
+                    <a href="https://col.pythonanywhere.com/forum/Question?id={{ question.id }}">{{question.title}}s</a>
                 </li>
                 <hr>
                 {% endfor %}
