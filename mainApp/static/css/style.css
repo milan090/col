@@ -391,19 +391,19 @@ h3 {
   font-size: 14px;
   font-weight: 400;
   border: 0;
-  border: 1px solid #28AE60;
+  border: 1px solid rgb(2, 55, 134);
   letter-spacing: 3px;
   text-align: center;
-  color: #28AE60 !important;
+  color: rgb(2, 55, 134) !important;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 /* line 17, ../../Arafath/CL/CL October/213. Business/HTML/scss/_btn.scss */
 .boxed-btn:hover {
-  background: #28AE60;
+  background: #023786;
   color: #fff !important;
-  border: 1px solid #28AE60;
+  border: 1px solid rgb(2, 55, 134);
 }
 
 /* line 22, ../../Arafath/CL/CL October/213. Business/HTML/scss/_btn.scss */
@@ -419,7 +419,7 @@ h3 {
 /* line 29, ../../Arafath/CL/CL October/213. Business/HTML/scss/_btn.scss */
 .boxed-btn3 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0181f5+0,5db2ff+100 */
-  background: #28AE60;
+  background: rgb(2, 55, 134);
   color: #fff;
   display: inline-block;
   padding: 14px 27px;
@@ -443,7 +443,7 @@ h3 {
 
 /* line 48, ../../Arafath/CL/CL October/213. Business/HTML/scss/_btn.scss */
 .boxed-btn3:hover {
-  background: #28AE61;
+  background: #023786;
   color: #fff !important;
 }
 
@@ -483,7 +483,7 @@ h3 {
 
 /* line 78, ../../Arafath/CL/CL October/213. Business/HTML/scss/_btn.scss */
 .boxed-btn3-white:hover {
-  background: #28AE61;
+  background: rgb(2, 55, 134);
   color: #fff !important;
   border: 1px solid transparent;
 }
@@ -505,14 +505,14 @@ h3 {
 
 /* line 94, ../../Arafath/CL/CL October/213. Business/HTML/scss/_btn.scss */
 .boxed-btn3-green-2 {
-  color: #28AE60 !important;
+  color: #023786 !important;
   display: inline-block;
   padding: 14px 31px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
-  border: 1px solid #28AE60;
+  border: 1px solid #023786;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -528,7 +528,7 @@ h3 {
 
 /* line 110, ../../Arafath/CL/CL October/213. Business/HTML/scss/_btn.scss */
 .boxed-btn3-green-2:hover {
-  background: #28AE60;
+  background: rgb(6, 233, 138);
   color: #fff !important;
   border: 1px solid transparent;
 }
@@ -709,12 +709,12 @@ h3 {
 /* line 28, ../../Arafath/CL/CL October/213. Business/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
-  color: #28AE60;
+  color: #023786;
 }
 
 /* line 32, ../../Arafath/CL/CL October/213. Business/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a.active {
-  color: #28AE60;
+  color:;
 }
 
 @media (max-width: 767px) {
@@ -961,7 +961,7 @@ h3 {
 
 /* line 108, ../../Arafath/CL/CL October/213. Business/HTML/scss/_header.scss */
 .header-area .main-header-area .Appointment .book_btn a {
-  background: #28AE60;
+  background: rgb(27, 79, 190);
   padding: 12px 26px;
   font-size: 14px;
   font-weight: 400;
@@ -981,9 +981,9 @@ h3 {
 
 /* line 119, ../../Arafath/CL/CL October/213. Business/HTML/scss/_header.scss */
 .header-area .main-header-area .Appointment .book_btn a:hover {
-  background: #28AE60;
+  background: rgb(27, 79, 190);
   color: #fff;
-  border: 1px solid #28AE60;
+  border: 1px solid rgb(27, 79, 190);
 }
 
 /* line 127, ../../Arafath/CL/CL October/213. Business/HTML/scss/_header.scss */
@@ -1059,7 +1059,7 @@ h3 {
 
 /* line 191, ../../Arafath/CL/CL October/213. Business/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a:hover {
-  color: #28AE60;
+  color: #023786;
 }
 
 /* line 195, ../../Arafath/CL/CL October/213. Business/HTML/scss/_header.scss */
@@ -1187,7 +1187,7 @@ h3 {
 
 /* line 290, ../../Arafath/CL/CL October/213. Business/HTML/scss/_header.scss */
 .header-area .header-top_area .social_media_links a:hover {
-  color: #28AE60;
+  color: #023786;
 }
 
 /* line 295, ../../Arafath/CL/CL October/213. Business/HTML/scss/_header.scss */
@@ -1224,7 +1224,7 @@ h3 {
 
 /* line 312, ../../Arafath/CL/CL October/213. Business/HTML/scss/_header.scss */
 .header-area .header-top_area .short_contact_list ul li a i {
-  color: #28AE60;
+  color: #023786;
   margin-right: 7px;
 }
 
@@ -1553,8 +1553,8 @@ h3 {
 
 /* line 121, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
 .about_wrap_area.about_wrap_area2 .single_service_wrap:hover {
-  background: #28AE60;
-  border-color: #28AE60;
+  background: #023786;
+  border-color: ##023786;
 }
 
 /* line 124, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
@@ -1649,13 +1649,13 @@ h3 {
 
 /* line 193, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
 .about_wrap_area .single_service_wrap:hover {
-  background: #28AE60;
-  border-color: #28AE60;
+  background: #023786;
+  border-color: rgb(247, 248, 248);
 }
 
 /* line 203, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
 .project_area {
-  background: #28AE60;
+  background: rgb(8, 29, 73);
   padding: 150px 0;
 }
 
@@ -1692,7 +1692,7 @@ h3 {
 /* line 227, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
 .project_area .project_info .boxed-btn3-white:hover {
   background: #fff;
-  color: #28AE60 !important;
+  color: #023786 !important;
 }
 
 /* line 237, ../../Arafath/CL/CL October/213. Business/HTML/scss/_about.scss */
@@ -1782,7 +1782,7 @@ h3 {
   line-height: 40px;
   border: 1px solid #D4EFDF;
   left: 0px;
-  color: #28AE60;
+  color: #023786;
   bottom: 0;
   top: auto;
 }
@@ -2751,8 +2751,8 @@ h3 {
 
 /* line 53, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p.footer_text a.domain:hover {
-  color: #28AE60;
-  border-bottom: 1px solid #28AE60;
+  color: #023786;
+  border-bottom: 1px solid #023786;
 }
 
 /* line 59, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
@@ -2763,8 +2763,8 @@ h3 {
 
 /* line 63, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p.footer_text.doanar a:hover {
-  color: #28AE60;
-  border-bottom: 1px solid #28AE60;
+  color: #023786;
+  border-bottom: 1px solid #023786;
 }
 
 /* line 67, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
@@ -2786,7 +2786,7 @@ h3 {
 
 /* line 81, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget ul li a:hover {
-  color: #28AE60;
+  color: #023786;
 }
 
 /* line 87, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
@@ -2821,7 +2821,7 @@ h3 {
   border: none;
   font-size: 14px;
   color: #fff;
-  background: #28AE60;
+  background: #023786;
   padding: 10px;
   padding: 0 22px;
   cursor: pointer;
@@ -2861,7 +2861,7 @@ h3 {
 
 /* line 137, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right a {
-  color: #28AE60;
+  color: #023786;
 }
 
 /* line 142, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
@@ -2902,7 +2902,7 @@ h3 {
 /* line 164, ../../Arafath/CL/CL October/213. Business/HTML/scss/_footer.scss */
 .footer .socail_links ul li a:hover {
   color: #fff !important;
-  background: #28AE60;
+  background: #023786;
 }
 
 /* line 1, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
@@ -2912,7 +2912,7 @@ h3 {
 
 /* line 4, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
 .breadcam_bg_2 {
-  background-image: url(../img/banner/bradcam_2.png);
+  background-image: url(../img/banner/yaya.jpg);
 }
 
 /* line 7, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
@@ -2922,7 +2922,7 @@ h3 {
 
 /* line 10, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
 .breadcam_bg_4 {
-  background-image: url(../img/banner/bradcam_4.png);
+  background-image: url(../img/banner/contact-us.jpg);
 }
 
 /* line 13, ../../Arafath/CL/CL October/213. Business/HTML/scss/_bradcam.scss */
@@ -3389,8 +3389,40 @@ h3 {
 }
 
 /* line 90, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
-.testmonial_area .testmonial_active2 .owl-dots .owl-dot:nth-child(even) {
-  background-image: url(../img/testmonial/1.png);
+.testmonial_area .testmonial_active2 .owl-dots .owl-dot:nth-child(1) {
+  background-image: url(../img/testmonial/milan.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.testmonial_area .testmonial_active2 .owl-dots .owl-dot:nth-child(2) {
+  background-image: url(../img/testmonial/rami.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.testmonial_area .testmonial_active2 .owl-dots .owl-dot:nth-child(3) {
+  background-image: url(../img/testmonial/fathih.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.testmonial_area .testmonial_active2 .owl-dots .owl-dot:nth-child(4) {
+  background-image: url(../img/testmonial/hashir1.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.testmonial_area .testmonial_active2 .owl-dots .owl-dot:nth-child(5) {
+  background-image: url(../img/testmonial/salman.jpg);
   background-size: cover;
   background-position: center center;
   -webkit-border-radius: 50%;
@@ -3398,22 +3430,13 @@ h3 {
   border-radius: 50%;
 }
 
-/* line 96, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
-.testmonial_area .testmonial_active2 .owl-dots .owl-dot:nth-child(odd) {
-  background-image: url(../img/testmonial/1.png);
-  background-size: cover;
-  background-position: center center;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-/* line 102, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
 .testmonial_area .testmonial_active2 .owl-dots .owl-dot.active {
   opacity: 1;
   width: 100px;
   height: 100px;
 }
+
+
 
 @media (max-width: 767px) {
   /* line 102, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
@@ -3423,9 +3446,187 @@ h3 {
   }
 }
 
+
+
+
+@media (max-width: 767px) {
+  /* line 102, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+  .testmonial_area .testmonial_active2 .owl-dots .owl-dot.active {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+
+/* user area start */
+
+
+.user_area {
+  padding-top: 0px;
+  padding-bottom: 150px;
+}
+
+@media (max-width: 767px) {
+  /* line 25, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+  .user_area {
+    padding-bottom: 50px;
+  }
+}
+
+/* line 34, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+.user_area .slider-nav div img {
+  width: 100%;
+}
+
+/* line 40, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+.user_area .single_slider p {
+  font-size: 20px;
+  line-height: 32px;
+  color: #727272;
+  font-weight: 400;
+  text-decoration: underline;
+  margin-bottom: 24px;
+}
+
+/* line 48, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+.user_area .single_slider h4 {
+  font-size: 16px;
+  color: #2C2C2C;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* line 54, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+.user_area .single_slider span {
+  color: #727272;
+  font-size: 14px;
+}
+
+/* line 65, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+.user_area .testmonial_active2 {
+  padding-top: 143px;
+}
+
+@media (max-width: 767px) {
+  /* line 65, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+  .user_area .testmonial_active2 {
+    padding-top: 80px;
+  }
+}
+
+/* line 70, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+.user_area .testmonial_active2 .owl-dots {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+/* line 79, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+.user_area .testmonial_active2 .owl-dots .owl-dot {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  margin: 0 9px;
+  opacity: .5;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  /* line 79, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+  .user_area .testmonial_active2 .owl-dots .owl-dot {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* line 90, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+.user_area .testmonial_active2 .owl-dots .owl-dot:nth-child(1) {
+  background-image: url(../img/testmonial/steve.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.user_area .testmonial_active2 .owl-dots .owl-dot:nth-child(2) {
+  background-image: url(../img/testmonial/Henry.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.user_area .testmonial_active2 .owl-dots .owl-dot:nth-child(3) {
+  background-image: url(../img/testmonial/mayer.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.user_area .testmonial_active2 .owl-dots .owl-dot:nth-child(4) {
+  background-image: url(../img/testmonial/helen.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.user_area .testmonial_active2 .owl-dots .owl-dot:nth-child(5) {
+  background-image: url(../img/testmonial/charles.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.user_area .testmonial_active2 .owl-dots .owl-dot.active {
+  opacity: 1;
+  width: 100px;
+  height: 100px;
+}
+
+
+
+@media (max-width: 767px) {
+  /* line 102, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+  .user_area .testmonial_active2 .owl-dots .owl-dot.active {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+
+
+
+@media (max-width: 767px) {
+  /* line 102, ../../Arafath/CL/CL October/213. Business/HTML/scss/_tesmonial.scss */
+  .user_area .testmonial_active2 .owl-dots .owl-dot.active {
+    height: 60px;
+    width: 60px;
+  }
+}
+/* user area end */
+
+
 /* line 1, ../../Arafath/CL/CL October/213. Business/HTML/scss/_service.scss */
 .service_bg_1 {
-  background-image: url(../img/about/1.png);
+  background-image: url(../img/about/mac.jpg);
 }
 
 /* line 3, ../../Arafath/CL/CL October/213. Business/HTML/scss/_service.scss */
@@ -3499,7 +3700,7 @@ h3 {
   display: table;
   width: 100%;
   height: 100%;
-  background: #28AE60;
+  background: #023786; 
   -webkit-transform: translateY(40%);
   -moz-transform: translateY(40%);
   -ms-transform: translateY(40%);
@@ -5264,7 +5465,7 @@ h6 {
 
 /* line 14, ../../Arafath/CL/CL October/213. Business/HTML/scss/_blog.scss */
 .blog_area a:hover, .blog_area a :hover {
-  background: -webkit-linear-gradient(131deg, #28AE60 0%, #28AE60 99%);
+  background: -webkit-linear-gradient(131deg, #023786 0%, #023786 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -5775,7 +5976,7 @@ h6 {
 
 /* line 544, ../../Arafath/CL/CL October/213. Business/HTML/scss/_blog.scss */
 .blog_details a:hover {
-  color: #28AE60;
+  color: #023786;
 }
 
 /* line 549, ../../Arafath/CL/CL October/213. Business/HTML/scss/_blog.scss */
@@ -5843,7 +6044,7 @@ h6 {
   left: 10px;
   display: block;
   color: #fff;
-  background-color: #28AE60;
+  background-color: #023786;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -6071,7 +6272,7 @@ h6 {
 
 /* line 842, ../../Arafath/CL/CL October/213. Business/HTML/scss/_blog.scss */
 .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-  background: #28AE60;
+  background: #023786;
   color: #fff !important;
   -webkit-text-fill-color: #fff;
   text-decoration: none;
@@ -6319,7 +6520,7 @@ h6 {
 
 /* line 1208, ../../Arafath/CL/CL October/213. Business/HTML/scss/_blog.scss */
 .single-post-area .blog-author a:hover {
-  color: #28AE60;
+  color: #023786;
 }
 
 /* line 1213, ../../Arafath/CL/CL October/213. Business/HTML/scss/_blog.scss */
@@ -6748,7 +6949,7 @@ h6 {
 
 /* line 72, ../../Arafath/CL/CL October/213. Business/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card .card-body a {
-  color: #28AE60;
+  color: #023786;
   text-transform: uppercase;
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -6775,7 +6976,7 @@ h6 {
   height: 10px;
   top: 5px;
   left: 0;
-  background-color: #28AE60;
+  background-color: #023786;
   border-radius: 50%;
 }
 
@@ -6910,5 +7111,28 @@ h6 {
   margin-right: 10px;
   font-size: 12px;
 }
+
+.pricing button{
+  border: 1px solid #023786;
+  padding: ;
+  border-radius: 5px;
+  color: #023786;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.pricing button a{
+  color: #023786;
+}
+
+.pricing button:hover {
+  background-color: #023786;
+  color: white;
+}
+
+.pricing button:hover a{
+  color: white;
+}
+
 
 /*# sourceMappingURL=style.css.map */

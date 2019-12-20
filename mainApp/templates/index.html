@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -8,7 +10,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
     
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
@@ -23,6 +24,26 @@
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+        .profile-img{
+            background-color: white;
+            color: black !important;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            position: relative;
+            text-align: center !important;
+            margin: auto;
+            margin-left: 20px;
+        }
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,7 +52,7 @@
         <![endif]-->
 
     <!-- header-start -->
-    <header>
+    <!-- <header>
         <div class="header-area ">
             <div class="header-top_area d-none d-lg-block">
                 <div class="container">
@@ -94,8 +115,37 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
     <!-- header-end -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <a href="{% url 'index' %}" class="navbar-brand" style="font-weight: bold;">CoL</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nav navbar-nav">
+                    <a href="{% url 'courses' %}" class="nav-item nav-link">Courses</a>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'user_courses' %}" class="nav-item nav-link">My Courses</a>
+                    {% endif %}
+                    <a href="{% url 'forum' %}" class="nav-item nav-link">Forum</a>
+                </div>
+
+                <div class="nav navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
+                    <a href="{% url 'user_profile' %}" class="nav-item nav-link profile-img"><p class="centered">{{user.username|make_list|first|title}}</p></a>
+                    {% else %}
+                    <a href="{% url 'user_login' %}" class="nav-item nav-link">Login</a>
+                    <a href="{% url 'register' %}" class="nav-item nav-link">Register</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- slider_area_start -->
     <div class="slider_area">
@@ -107,12 +157,10 @@
                             <div class="slider_text ">
                                 <h3> Learning has  <br>
                                     never been this fun! </h3>
-                                <p>We are aiming to   <br>
-                                   STOP COMPETITION AND START COLLABORATION .</p>
                                 <div class="video_service_btn">
-                                    <a href="#" class="boxed-btn3">Our Courses</a>
+                                    <a href="course.html" class="boxed-btn3">Our Courses</a>
                                     <a href="#" class="boxed-btn3-white"> <i class="fa fa-play"></i>
-                                        See How it Work</a>
+                                        See How it Works</a>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +265,7 @@
 
 
     
-
+<!-- 
     <div class="testmonial_area">
         <div class="container">
             <div class="row">
@@ -256,6 +304,58 @@
                                     <div class="author_name text-center">
                                         <h4>Salman Fadi</h4>
                                         <span> Developer</span>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="user_area">
+        <div class="container">
+            <h2 style="text-align: center;">Our Inspiration</h2><br>
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                        <div class="testmonial_active2 owl-carousel">
+                            <div  class="single_slider1 text-center" data-dot='<img src="{% static 'img/testmonial/1.png' %}" alt="#" ' >
+                                
+                                    <div class="author_name text-center">
+                                        <h4>Steve Jobs</h4>
+                                        <p>“Your time is limited, so don’t waste it living someone else’s life.”</p>
+                                        <span>Co-Founder of Apple</span>
+                                    </div>
+                                </div>
+                            <div  class="single_slider2 text-center" data-dot='<img src="{% static 'img/testmonial/rami.jpg' %}" alt="#" ' >
+                                
+                                    <div class="author_name text-center">
+                                        <h4>Henry Ford</h4>
+                                        <p>"Coming together is a beginning, staying together is progress and working together is success" </p>
+                                        <span>American industrialist</span>
+                                    </div>
+                                </div>
+                            <div  class="single_slider3 text-center" data-dot='<img src="{% static 'img/testmonial/1.png' %}" alt="#" ' >
+                                
+                                    <div class="author_name text-center">
+                                        <h4>Marissa Mayer</h4>
+                                        <p>"When you need to innovate, you need collaboration" </p>
+                                        <span> American businesswoman</span>
+                                    </div>
+                                </div>
+                                <div  class="single_slider4 text-center" data-dot='<img src="{% static 'img/testmonial/1.png' %}" alt="#" ' >
+                                
+                                    <div class="author_name text-center">
+                                        <h4>Helen Keller</h4>
+                                        <P>"Alone we can do so little; together we can do so much"</P>
+                                        <span>American author</span>
+                                    </div>
+                                </div>
+                                <div  class="single_slider5 text-center" data-dot='<img src="{% static 'img/testmonial/1.png' %}" alt="#" ' >
+                                    
+                                    <div class="author_name text-center">
+                                        <h4>Charles Darwin</h4>
+                                        <p>"Those who have learn to collaborate and improvise most effectively preveiled"</p>
+                                        <span> Naturalist</span>
                                     </div>
                                 </div>
                         </div>
@@ -406,33 +506,33 @@
     <!-- form itself end -->
 
     <!-- JS here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/gijgo.min.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/ajax-form.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/scrollIt.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/gijgo.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
     <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/jquery.form.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
 
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
